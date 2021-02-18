@@ -6,6 +6,7 @@ First, We ran the SFDX command "SFDX : Create Project with Manifest"
 You can retrieve or deploy only a single package at a time. (According to google lol).
 
 Once we have our project we now have to set out defualt Org!
+
 -We will be starting a new org and create the objects / data model by scratch.
   
   
