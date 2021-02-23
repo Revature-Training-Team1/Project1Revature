@@ -1,0 +1,8 @@
+<apex:page controller="Feb22CodingChallenge_CC">
+    <apex:pageBlock Title="Accounts With Total Opportunity Value">
+        <apex:pageBlockTable value="{! accountList}" var="acc">
+            <apex:column value="{! acc.name}" headerValue="Account Name"/>
+            <apex:column value="{! acc.revenue}" headerValue="Total Opportunity Value"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>
