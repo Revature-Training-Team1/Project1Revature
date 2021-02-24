@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fragile__c</fullName>
+    <externalId>false</externalId>
+    <label>Fragile</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Fragile</fullName>
+                <default>true</default>
+                <label>Not Fragile</label>
+            </value>
+            <value>
+                <fullName>Fragile</fullName>
+                <default>false</default>
+                <label>Fragile</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Letter_Mail</fullName>
+    <active>true</active>
+    <description>This record type is for Letter Mails only</description>
+    <label>Letter Mail</label>
+    <picklistValues>
+        <picklist>Delivery_Status__c</picklist>
+        <values>
+            <fullName>Delivered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out for Delivery</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fragile__c</picklist>
+        <values>
+            <fullName>Fragile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Fragile</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>
