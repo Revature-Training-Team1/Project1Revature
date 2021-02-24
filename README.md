@@ -11,8 +11,9 @@ Once we have our project we now have to set out defualt Org!
 Be sure to have:
  
     <types>
-        <members></members>
-        <name>Profiles</name>
+        <members>Custom-Mail-Handler</members>
+        <members>Custom-Driver</members>
+        <name>Profile</name>
     </types>
     <types>
         <members>*</members>
