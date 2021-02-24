@@ -34,13 +34,16 @@
         <members>CustomerPage</members>
         <name>ApexPage</name>
     </types>
-
-    
-    <!--
     <types>
-        <members>*</members>
+        <members>packagesInShipping</members>
         <name>ApexComponent</name>
     </types>
+    <types>
+        <members>Shipments_CC</members>
+        <name>ApexClass</name>
+    </types>
+    
+    <!--
     <types>
         <members>*</members>
         <name>ExperienceBundle</name>
@@ -61,10 +64,6 @@
     <types>
         <members>*</members>
         <name>ApexTrigger</name>
-    </types>
-     <types>
-        <members>*</members>
-        <name>ApexClass</name>
     </types>
     <types>
         <members>*</members>
