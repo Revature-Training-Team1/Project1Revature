@@ -35,7 +35,7 @@ public inherited sharing class Shipments_CC {
                 receivedItems = new List<MailWrapper>();
                 //TODO
             }
-            return shippingToYou;
+            return receivedItems;
         }
         private set;
     }
