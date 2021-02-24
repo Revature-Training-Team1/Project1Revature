@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Mail_must_have_a_route</fullName>
-    <active>true</active>
-    <description>Mail must have a route. Set this to Unsorted if unsure of the route.</description>
-    <errorConditionFormula>ISBLANK(Route__c)</errorConditionFormula>
-    <errorDisplayField>Route__c</errorDisplayField>
-    <errorMessage>Mail must have a route. Set this to Unsorted if unsure of the route.</errorMessage>
-</ValidationRule>
