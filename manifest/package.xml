@@ -42,12 +42,12 @@
         <members>Shipments_CC</members>
         <name>ApexClass</name>
     </types>
-    
-    <!--
     <types>
         <members>*</members>
         <name>ExperienceBundle</name>
     </types>
+    <!--
+    
     Flows include Processes
     <types>
         <members>*</members>

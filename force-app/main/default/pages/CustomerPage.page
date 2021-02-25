@@ -1,6 +1,6 @@
 <apex:page >
     <!--TODO: find and edit account information -->
-
+    <h1>new page</h1>
     <!--TODO: Find account and send it to the components -->
     <!--<c:packagesInShipping customer="{!TODO_AccountOfThisCustomer}"/> -->
     <!--<c:pastDeliveries customer="{!TODO_AccountOfThisCustomer}"/> -->
