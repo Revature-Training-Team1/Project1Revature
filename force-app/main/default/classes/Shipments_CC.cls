@@ -1,9 +1,20 @@
-public inherited sharing class Shipments_CC {
+public without sharing class Shipments_CC {
+
+    private Account customer {get; set;}
     public List<MailWrapper> shippingOut{
         get {
             if(shippingOut == null){
                 shippingOut = new List<MailWrapper>();
-                //TODO
+                try{
+                	List<Mail__c> queryResults = 
+                    	[SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c FROM Mail__c 
+                    	WHERE Sender__r.Contact__c IN :customer.Contacts AND Delivery_Status__c = 'Shipping'];
+                    for(Mail__c m:queryResults){
+                        shippingOut.add(new MailWrapper(m));
+                    }
+                } catch (System.Exception e){
+                    ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO, e.getStackTraceString()));
+                }
             }
             return shippingOut;
         }

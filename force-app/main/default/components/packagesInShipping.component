@@ -1,6 +1,5 @@
 <apex:component controller="Shipments_CC">
     <apex:attribute name="customer" required="true" type="Account" description="The account to find shipments for." />
-
     <!-- two lists: whether they are the sender or receiver -->
     <apex:form >
         <apex:pageBlock title="Sent items being shipped">
