@@ -7,16 +7,9 @@ public without sharing class Shipments_CC {
                 shippingOut = new List<MailWrapper>();
                 try{
                 	List<Mail__c> queryResults = 
-<<<<<<< HEAD
-                    	[SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c FROM Mail__c 
-                    	WHERE Sender__r.Contact__c IN :customer.Contacts AND Delivery_Status__c = 'Being Delivered'];
-                    for(Mail__c m:queryResults){
-                        System.debug(m);
-=======
                     	[SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c, addressee__c FROM Mail__c WHERE Delivery_Status__c = 'Being Delivered'];
                     for(Mail__c m:queryResults){
                         // if(customer.contact.contains(m.Addressee__c.contact__c))
->>>>>>> Brandon
                         shippingOut.add(new MailWrapper(m));
                     }
                 } catch (System.Exception e){
@@ -31,19 +24,6 @@ public without sharing class Shipments_CC {
         get {
             if(shippingToYou==null){
                 shippingToYou = new List<MailWrapper>();
-<<<<<<< HEAD
-                try {
-                    List<Mail__c> query = [SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c, addressee__c FROM Mail__c WHERE Delivery_Status__c = 'Delivered'];
-                    for (Mail__c b:query)
-    
-                    {
-                        shippingToYou.add(new MailWrapper(b));
-                    }
-                }
-                catch (System.Exception e) {
-                    //ApexPages.addMessage(new ApexPages.Message(ApexPages.Sererity.INFO, e.getStackTraceString()));
-                }
-=======
                 //TODO
                 try{
                 List<Mail__c> query = 
@@ -57,10 +37,7 @@ public without sharing class Shipments_CC {
             }
         }
             return shippingToYou;
->>>>>>> Brandon
         }
-        return shippingToYou;
-    }
         private set;
     }
     public List<MailWrapper> sentItems{
