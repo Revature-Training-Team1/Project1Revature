@@ -1,6 +1,6 @@
 public without sharing class Shipments_CC {
 
-    private Account customer {get; set;}
+    public Account customer {get; set;}
     public List<MailWrapper> shippingOut{
         get {
             if(shippingOut == null){
@@ -12,8 +12,11 @@ public without sharing class Shipments_CC {
                         // if(customer.contact.contains(m.Addressee__c.contact__c))
                         shippingOut.add(new MailWrapper(m));
                     }
+                    if(shippingOut.size()<=0){
+                        ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO,'No packages found.'));
+                    }
                 } catch (System.Exception e){
-                    ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO, e.getStackTraceString()));
+                    ApexPages.addMessages(e);
                 }
             }
             return shippingOut;
@@ -80,11 +83,5 @@ public without sharing class Shipments_CC {
             return receivedItems;
         }
         private set;
-    }
-    public class MailWrapper{
-        public Mail__c mail{get; private set;}
-        public MailWrapper(Mail__c m){
-            mail = m;
-        }
     }
 }
