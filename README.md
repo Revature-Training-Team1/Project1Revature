@@ -1,3 +1,15 @@
+# How we set up
+
+First, We ran the SFDX command "SFDX : Create Project with Manifest" 
+
+-We want to create a project with manifest because the manifest lists all the components you want to retrieve or deploy in a single request. 
+You can retrieve or deploy only a single package at a time. (According to google lol).
+
+Once we have our project we now have to set out defualt Org!
+
+-We will be starting a new org and create the objects / data model by scratch.
+  
+  
 # Salesforce DX Project: Next Steps
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
