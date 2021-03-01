@@ -1,0 +1,16 @@
+<apex:page controller="AccountList_CC" lightningStylesheets="true">
+    <apex:form>
+    <apex:pageBlock title="Your Accounts">
+        <apex:pageBlockTable var="acc" value="{!results}">
+            <apex:column>
+                <apex:outputLink value="{! URLFOR('/apex/CustomerPage')}">
+                    <apex:param name="Id" value="{!acc.Id}"/>
+                    See Packages
+                </apex:outputLink>
+            </apex:column>
+            <apex:column value="{!acc.Name}"/> 
+            <apex:column value="{!acc.AccountNumber}" />
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

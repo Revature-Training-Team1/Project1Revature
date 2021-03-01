@@ -1,6 +1,12 @@
 <apex:page standardController="Account" lightningStylesheets="true" >
     <!--TODO: see and edit account information -->
-    <apex:form id="theForm">
+    <apex:pageBlock title="Account Information">
+        <apex:detail subject="{!Account}" relatedList="false" title="false" inlineEdit="true"/>
+        <!--<apex:form><div align="Center">
+            <apex:commandButton value="Edit Account Information" action="{! URLFOR($Action.Account.Edit, Account.Id)}"/>
+        </div></apex:form> -->
+    </apex:pageBlock>
+    <!--<apex:form id="theForm">
         <apex:pageBlock title="Account Information">
             <apex:pageBlockSection >
                 <apex:outputField value="{!Account.Name}"/>
@@ -8,15 +14,13 @@
             </apex:pageBlockSection>
             <div align="Center"><apex:commandButton value="Edit Account Information" action="{! URLFOR($Action.Account.Edit, Account.Id)}" rerender="theForm"/></div>
         </apex:pageBlock>
-    </apex:form>
+    </apex:form>-->
 
-    <!-- originally outputLink -->
-    <!-- <apex:commandButton value="{! URLFOR($Action.Account.Edit, Account.Id}"/> -->
-
+     <!-- TODO: Find packages by tracking code (would Mail__c.Id work?) -->
+     <c:searchPackages />
     <!--TODO: Find account and send it to the components -->
     <c:packagesInShipping customer="{!Account}"/>
     <c:pastDeliveries customer="{!Account}"/>
 
-    <!-- TODO: Find packages by tracking code (would Mail__c.Id work?) -->
     <!-- TODO: Style page -->
 </apex:page>
