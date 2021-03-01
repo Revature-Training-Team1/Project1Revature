@@ -26,7 +26,7 @@ public without sharing class Shipments_CC {
             if(shippingToYou==null){
                 shippingToYou = new List<MailWrapper>();
                 try {
-                    List<Mail__c> query = [SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c, addressee__c FROM Mail__c WHERE Delivery_Status__c = 'Shipped'];
+                    List<Mail__c> query = [SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c, addressee__c FROM Mail__c WHERE Delivery_Status__c = 'Delivered'];
                     for (Mail__c b:query)
     
                     {
