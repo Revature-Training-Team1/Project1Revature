@@ -7,10 +7,9 @@ public without sharing class Shipments_CC {
                 shippingOut = new List<MailWrapper>();
                 try{
                 	List<Mail__c> queryResults = 
-                    	[SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c FROM Mail__c 
-                    	WHERE Sender__r.Contact__c IN :customer.Contacts AND Delivery_Status__c = 'Being Delivered'];
+                    	[SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c, addressee__c FROM Mail__c WHERE Delivery_Status__c = 'Being Delivered'];
                     for(Mail__c m:queryResults){
-                        System.debug(m);
+                        // if(customer.contact.contains(m.Addressee__c.contact__c))
                         shippingOut.add(new MailWrapper(m));
                     }
                     if(shippingOut.size()<=0){
@@ -28,20 +27,20 @@ public without sharing class Shipments_CC {
         get {
             if(shippingToYou==null){
                 shippingToYou = new List<MailWrapper>();
-                try {
-                    List<Mail__c> query = [SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c, addressee__c FROM Mail__c WHERE Delivery_Status__c = 'Shipped'];
-                    for (Mail__c b:query)
-    
-                    {
+                //TODO
+                try{
+                List<Mail__c> query = 
+                    	[SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c, addressee__c FROM Mail__c WHERE Delivery_Status__c = 'Being Delivered'];
+                    for(Mail__c b:query){
+                        //  if(customer.Contacts.contains(b.Addressee__c))
                         shippingToYou.add(new MailWrapper(b));
                     }
-                }
-                catch (System.Exception e) {
-                    //ApexPages.addMessage(new ApexPages.Message(ApexPages.Sererity.INFO, e.getStackTraceString()));
-                }
+                } catch (System.Exception e){
+                    ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO, e.getStackTraceString()));
+            }
         }
-        return shippingToYou;
-    }
+            return shippingToYou;
+        }
         private set;
     }
     public List<MailWrapper> sentItems{
@@ -49,7 +48,17 @@ public without sharing class Shipments_CC {
             if(sentItems==null){
                 sentItems = new List<MailWrapper>();
                 //TODO
+                try{
+                    List<Mail__c> query=
+                    [SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c, addressee__c FROM Mail__c WHERE Delivery_Status__c = 'Delivered'];
+                    for(mail__c c:query){
+                        // if(customer.contacts.contains(m.Addressee__c.contact__c))
+                        sentItems.add(new MailWrapper(c));
+                    }
+                } catch (System.Exception e){
+                    ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO, e.getStackTraceString()));
             }
+        }
             return sentItems;
         }
         private set;
@@ -59,6 +68,17 @@ public without sharing class Shipments_CC {
             if(receivedItems==null){
                 receivedItems = new List<MailWrapper>();
                 //TODO
+                try{
+                    List<Mail__c> query=
+                    [SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c, addressee__c FROM Mail__c WHERE Delivery_Status__c = 'Delivered'];
+                    for(mail__c d:query){
+                        // if(customer.contacts.contains(m.Addressee__c.contact__c))
+                        receivedItems.add(new MailWrapper(d));
+                    }
+                }
+                catch (System.Exception e){
+                    ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO, e.getStackTraceString()));
+                }
             }
             return receivedItems;
         }

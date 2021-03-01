@@ -7,15 +7,15 @@
             <apex:pageBlockTable var="c" value="{!shippingOut}">
                 <!-- TODO: make these clickable -->
                 <apex:column value="{!c.mail.Id}" headerValue="Tracking Number" />
-                <apex:column value="{!c.mail.Addressee__c}" headerValue="Receipient"/>
+                <apex:column value="{!c.mail.Addressee__c}" headerValue="Recipient"/>
             </apex:pageBlockTable>
         </apex:pageBlock>
         <apex:pageBlock title="Items being shipped to your account">
             <apex:pageMessages />
-            <apex:pageBlockTable var="c" value="{!shippingToYou}">
+            <apex:pageBlockTable var="c" value="{!shippingToYou}"> 
                 <!-- TODO: make these clickable -->
                 <apex:column value="{!c.mail.Id}" headerValue="Tracking Number" />
-                <apex:column value="{!c.mail.Addressee__c}" headerValue="Receipient" />
+                <apex:column value="{!c.mail.Addressee__c}" headerValue="Recipient" />
             </apex:pageBlockTable>
         </apex:pageBlock>
     </apex:form>
