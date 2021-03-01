@@ -1,0 +1,9 @@
+<apex:component controller="PackageTracker_CC">
+<apex:form >
+    <apex:pageBlock title="Package Lookup">
+        <apex:inputText value="{!whatToLookup}" id="packageLookup"/>
+        <apex:commandButton action="{!doLookup}" value="Search" id="packageLookup" />
+        <apex:message for="packageLookup"/>
+    </apex:pageBlock>
+</apex:form>
+</apex:component>
