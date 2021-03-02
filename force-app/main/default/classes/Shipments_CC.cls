@@ -20,7 +20,7 @@ public without sharing class Shipments_CC {
                 shippingOut = new List<MailWrapper>();
                 try{
                 	List<Mail__c> queryResults = 
-                    	[SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c FROM Mail__c WHERE Delivery_Status__c = 'Being Delivered'];
+                    	[SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c, Addressee__c FROM Mail__c WHERE Delivery_Status__c = 'Being Delivered'];
                     for(Mail__c mail:queryResults){
                         if(contacts.contains(mail.Sender__r.Contact__c)){
                             shippingOut.add(new MailWrapper(mail));
@@ -63,7 +63,7 @@ public without sharing class Shipments_CC {
                 sentItems = new List<MailWrapper>();
                 try{
                     List<Mail__c> query=
-                    [SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c FROM Mail__c WHERE Delivery_Status__c = 'Delivered'];
+                    [SELECT Id, Sender__c, Sender__r.Contact__c, Delivery_Status__c, Addressee__c FROM Mail__c WHERE Delivery_Status__c = 'Delivered'];
                     for(Mail__c mail:query){
                         if(contacts.contains(mail.Sender__r.Contact__c)){
                             sentItems.add(new MailWrapper(mail));

@@ -4,20 +4,30 @@
     <!-- two lists: whether they are the sender or receiver -->
     <apex:form >
         <apex:pageBlock title="Sent Items">
-            <apex:pageMessages />
+            <apex:pageMessage rendered="{!!(sentItems.size>0)}" summary="No packages found." severity="INFO" strength="1"/>
             <apex:pageBlockTable var="c" value="{!sentItems}">
-                <!-- TODO: make these clickable -->
+                <apex:column >
+                <apex:outputLink value="{! URLFOR('/apex/SimpleMail')}">
+                    <apex:param name="Id" value="{!c.mail.Id}"/>
+                    See Package
+                </apex:outputLink>
+            </apex:column>
                 <apex:column value="{!c.mail.Id}" headerValue="Tracking Number" />
-                <apex:column value="{!c.mail.Addressee__c}" headerValue="Receipient"/>
+                <apex:column value="{!c.mail.Addressee__c}" headerValue="Recipient"/>
                 <!-- TODO: add date of receipt -->
             </apex:pageBlockTable>
         </apex:pageBlock>
         <apex:pageBlock title="Received Items">
-            <apex:pageMessages />
+            <apex:pageMessage rendered="{!!(receivedItems.size>0)}" summary="No packages found." severity="INFO" strength="1"/>
             <apex:pageBlockTable var="c" value="{!receivedItems}">
-                <!-- TODO: make these clickable -->
+                <apex:column >
+                <apex:outputLink value="{! URLFOR('/apex/SimpleMail')}">
+                    <apex:param name="Id" value="{!c.mail.Id}"/>
+                    See Package
+                </apex:outputLink>
+            </apex:column>
                 <apex:column value="{!c.mail.Id}" headerValue="Tracking Number" />
-                <apex:column value="{!c.mail.Addressee__c}" headerValue="Receipient" />
+                <apex:column value="{!c.mail.Addressee__c}" headerValue="Recipient" />
                 <!-- TODO: add date of receipt -->
             </apex:pageBlockTable>
         </apex:pageBlock>
