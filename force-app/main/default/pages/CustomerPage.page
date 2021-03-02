@@ -1,7 +1,7 @@
-<apex:page standardController="Account" lightningStylesheets="true" >
-    <!--TODO: see and edit account information -->
+<apex:page controller="CustomerPage_CC" lightningStylesheets="true" >
+    <c:searchPackages />
     <apex:pageBlock title="Account Information">
-        <apex:detail subject="{!Account}" relatedList="false" title="false" inlineEdit="true"/>
+        <apex:detail subject="{!acc}" relatedList="false" title="false" inlineEdit="true"/>
         <!--<apex:form><div align="Center">
             <apex:commandButton value="Edit Account Information" action="{! URLFOR($Action.Account.Edit, Account.Id)}"/>
         </div></apex:form> -->
@@ -16,11 +16,8 @@
         </apex:pageBlock>
     </apex:form>-->
 
-     <!-- TODO: Find packages by tracking code (would Mail__c.Id work?) -->
-     <c:searchPackages />
-    <!--TODO: Find account and send it to the components -->
-    <c:packagesInShipping customer="{!Account}"/>
-    <c:pastDeliveries customer="{!Account}"/>
+    <c:packagesInShipping customer="{!acc}"/>
+    <c:pastDeliveries customer="{!acc}"/>
 
     <!-- TODO: Style page -->
 </apex:page>

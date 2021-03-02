@@ -54,6 +54,18 @@
         <members>*</members>
         <name>Network</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>CustomSite</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>SiteDotCom</name>
+    </types>
+    <types>
+        <members>Security</members>
+        <name>Settings</name>
+    </types>
     <!--
     
     Flows include Processes
