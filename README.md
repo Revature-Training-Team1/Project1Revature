@@ -7,7 +7,20 @@ You can retrieve or deploy only a single package at a time. (According to google
 
 Once we have our project we now have to set out defualt Org!
 
--We will be starting a new org and create the objects / data model by scratch.
+-We used a data model from a previous project and retrieved it through the package.xml
+Be sure to have:
+ 
+    <types>
+        <members>Custom-Mail-Handler</members>
+        <members>Custom-Driver</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+
+included in your package.xml
   
   
 # Salesforce DX Project: Next Steps
