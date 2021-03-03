@@ -25,31 +25,31 @@
         <field>Mail__c.Delivery_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
+    <!-- <fieldPermissions>
         <editable>false</editable>
         <field>Mail__c.Depth__c</field>
         <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
+    </fieldPermissions> -->
+    <!-- <fieldPermissions>
         <editable>false</editable>
         <field>Mail__c.Fragile__c</field>
         <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
+    </fieldPermissions> -->
+    <!-- <fieldPermissions>
         <editable>false</editable>
         <field>Mail__c.Height__c</field>
         <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
+    </fieldPermissions> -->
+    <!-- <fieldPermissions>
         <editable>false</editable>
         <field>Mail__c.Insured__c</field>
         <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
+    </fieldPermissions> -->
+    <!-- <fieldPermissions>
         <editable>false</editable>
         <field>Mail__c.Package_Value__c</field>
         <readable>false</readable>
-    </fieldPermissions>
+    </fieldPermissions> -->
     <fieldPermissions>
         <editable>true</editable>
         <field>Mail__c.Route__c</field>
@@ -60,16 +60,16 @@
         <field>Mail__c.Sender__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
+    <!-- <fieldPermissions>
         <editable>false</editable>
         <field>Mail__c.Weight__c</field>
         <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
+    </fieldPermissions> -->
+    <!-- <fieldPermissions>
         <editable>false</editable>
         <field>Mail__c.Width__c</field>
         <readable>false</readable>
-    </fieldPermissions>
+    </fieldPermissions> -->
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
