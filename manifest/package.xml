@@ -39,13 +39,13 @@
         <name>ApexComponent</name>
     </types>
     <types>
-        <members>Shipments_CC</members>
+        <members>*</members>
         <name>ApexClass</name>
     </types>
-    <types>
+    <!--types>
         <members>*</members>
         <name>ExperienceBundle</name>
-    </types>
+    </types-->
     <types>
         <members>Admin</members>
         <name>Profile</name>
@@ -68,12 +68,12 @@
     </types>
     <!--
     
-    Flows include Processes
+    Flows include -->
     <types>
         <members>*</members>
         <name>Flow</name>
     </types>
-    <types>
+    <!--types>
         <members>*</members>
         <name>Workflow</name>
     </types>

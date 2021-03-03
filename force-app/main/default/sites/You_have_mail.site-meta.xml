@@ -22,8 +22,8 @@
     <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
     <requireHttps>true</requireHttps>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>forest.sweeney@resourceful-moose-74nvai.com</siteAdmin>
-    <siteGuestRecordDefaultOwner>forest.sweeney@resourceful-moose-74nvai.com</siteGuestRecordDefaultOwner>
+    <siteAdmin>tobias.yasutake@brave-panda-o7ohxs.com</siteAdmin>
+    <siteGuestRecordDefaultOwner>tobias.yasutake@brave-panda-o7ohxs.com</siteGuestRecordDefaultOwner>
     <siteType>ChatterNetwork</siteType>
     <subdomain>postalcustomers-developer-edition</subdomain>
     <urlPathPrefix>PostalService</urlPathPrefix>
