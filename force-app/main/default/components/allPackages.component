@@ -1,0 +1,13 @@
+<apex:component standardController="Mail__c" recordSetVar="mail">
+    <apex:pageBlock>
+        <apex:pageBlockSection title="Mail Being Delivered and Delivered">
+            <apex:pageBlockTable value="{!mail}" var="m">
+                <apex:column value="{!m.Id}" headerValue="Tracking Number"/>
+                <apex:column value="{!m.Sender__c}" headerValue="Source"/>
+                <apex:column value="{!m.Addressee__c}" headerValue="Destination"/>
+                <apex:column value="{!m.Delivery_Status__c}" headerValue="Status"/>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+
+    </apex:pageBlock>
+</apex:component>

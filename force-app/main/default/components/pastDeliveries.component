@@ -3,7 +3,7 @@
 
     <!-- two lists: whether they are the sender or receiver -->
     <apex:form >
-        <apex:pageBlock title="Sent Items">
+        <apex:pageBlock title="Items Delivered">
             <apex:pageMessage rendered="{!!(sentItems.size>0)}" summary="No packages found." severity="INFO" strength="1"/>
             <apex:pageBlockTable var="c" value="{!sentItems}">
                 <apex:column >
@@ -17,7 +17,7 @@
                 <!-- TODO: add date of receipt -->
             </apex:pageBlockTable>
         </apex:pageBlock>
-        <apex:pageBlock title="Received Items">
+        <!--<apex:pageBlock title="Received Items">
             <apex:pageMessage rendered="{!!(receivedItems.size>0)}" summary="No packages found." severity="INFO" strength="1"/>
             <apex:pageBlockTable var="c" value="{!receivedItems}">
                 <apex:column >
@@ -28,8 +28,8 @@
             </apex:column>
                 <apex:column value="{!c.mail.Id}" headerValue="Tracking Number" />
                 <apex:column value="{!c.mail.Addressee__c}" headerValue="Recipient" />
-                <!-- TODO: add date of receipt -->
+                
             </apex:pageBlockTable>
-        </apex:pageBlock>
+        </apex:pageBlock>-->
     </apex:form>
 </apex:component>

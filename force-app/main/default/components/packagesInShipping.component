@@ -2,7 +2,7 @@
     <apex:attribute name="customer" required="true" type="Account" description="The account to find shipments for." />
     <!-- two lists: whether they are the sender or receiver -->
     <apex:form >
-        <apex:pageBlock title="Sent items being shipped">
+        <apex:pageBlock title="Items being shipped">
             <apex:pageMessage rendered="{!!(shippingOut.size>0)}" summary="No packages found." severity="INFO" strength="1"/>
             <apex:pageBlockTable var="c" value="{!shippingOut}">
                 <apex:column >
@@ -15,7 +15,7 @@
                 <apex:column value="{!c.mail.Addressee__c}" headerValue="Recipient"/>
             </apex:pageBlockTable>
         </apex:pageBlock>
-        <apex:pageBlock title="Items being shipped to your account">
+        <!--<apex:pageBlock title="Items being shipped to your account">
             <apex:pageMessage rendered="{!!(shippingToYou.size>0)}" summary="No packages found." severity="INFO" strength="1"/>
             <apex:pageBlockTable var="c" value="{!shippingToYou}"> 
                 <apex:column >
@@ -27,6 +27,6 @@
                 <apex:column value="{!c.mail.Id}" headerValue="Tracking Number" />
                 <apex:column value="{!c.mail.Addressee__c}" headerValue="Recipient" />
             </apex:pageBlockTable>
-        </apex:pageBlock>
+        </apex:pageBlock>-->
     </apex:form>
 </apex:component>

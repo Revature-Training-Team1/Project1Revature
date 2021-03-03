@@ -48,6 +48,8 @@
     </types-->
     <types>
         <members>Admin</members>
+        <members>Customer</members>
+        <members>PortalManager</members>
         <name>Profile</name>
     </types>
     <types>
@@ -65,6 +67,10 @@
     <types>
         <members>Security</members>
         <name>Settings</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Flow</name>
     </types>
     <!--
     
