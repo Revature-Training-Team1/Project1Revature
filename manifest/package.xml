@@ -39,25 +39,41 @@
         <name>ApexComponent</name>
     </types>
     <types>
-        <members>Shipments_CC</members>
+        <members>*</members>
         <name>ApexClass</name>
     </types>
-    <types>
+    <!--types>
         <members>*</members>
         <name>ExperienceBundle</name>
-    </types>
+    </types-->
     <types>
         <members>Admin</members>
         <name>Profile</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>Network</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomSite</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>SiteDotCom</name>
+    </types>
+    <types>
+        <members>Security</members>
+        <name>Settings</name>
+    </types>
     <!--
     
-    Flows include Processes
+    Flows include -->
     <types>
         <members>*</members>
         <name>Flow</name>
     </types>
-    <types>
+    <!--types>
         <members>*</members>
         <name>Workflow</name>
     </types>
