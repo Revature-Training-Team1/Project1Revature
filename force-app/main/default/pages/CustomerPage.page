@@ -1,4 +1,4 @@
-<apex:page controller="CustomerPage_CC" lightningStylesheets="true" >
+<apex:page standardController="Account" extensions="CustomerPage_CX" lightningStylesheets="true" >
     <c:searchPackages />
     <apex:pageBlock title="Account Information">
         <apex:detail subject="{!acc}" relatedList="false" title="false" inlineEdit="true"/>
@@ -15,7 +15,7 @@
             <div align="Center"><apex:commandButton value="Edit Account Information" action="{! URLFOR($Action.Account.Edit, Account.Id)}" rerender="theForm"/></div>
         </apex:pageBlock>
     </apex:form>-->
-
+    
     <c:packagesInShipping customer="{!acc}"/>
     <c:pastDeliveries customer="{!acc}"/>
 

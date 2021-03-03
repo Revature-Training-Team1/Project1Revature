@@ -1,3 +1,11 @@
 <apex:page standardController="Mail__c" lightningStylesheets="true">
-    <apex:detail subject="{!Mail__c}" relatedList="false" title="false" inlineEdit="false"/>
+    <apex:pageBlock>
+        <apex:pageBlockSection >
+            <apex:outputField value="{!Mail__c.Id}"/>
+            <apex:outputField value="{!Mail__c.Delivery_Status__c}"/>
+            <br/>
+            <apex:outputField value="{!Mail__c.Sender__c}"/>
+            <apex:outputField value="{!Mail__c.Addressee__c}"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
 </apex:page>
